@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file. Created by 
 ### Added - 2016-11-04
 - Created toggle function and controller @New3 @gerardngjr
 
+
 ## [1.0.0] - 2016-10-21
 ### Added
 - lab 5 release version 1.0 @New3 @gerardng

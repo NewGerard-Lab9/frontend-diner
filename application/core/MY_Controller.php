@@ -43,6 +43,7 @@ class Application extends CI_Controller
         if (!isset($this->data['content']))
             $this->data['content'] = $this->parser->parse($this->data['pagebody'], $this->data, true);
 
+
         // integrate any needed CSS framework & components
         $this->data['caboose_styles'] = $this->caboose->styles();
         $this->data['caboose_scripts'] = $this->caboose->scripts();

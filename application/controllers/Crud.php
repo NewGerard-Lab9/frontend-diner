@@ -28,4 +28,5 @@ class Crud extends Application
 
         $this->render();
     }
+
 }
