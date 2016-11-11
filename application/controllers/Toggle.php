@@ -7,7 +7,7 @@
  * Time: 11:46 AM
  */
 class Toggle extends Application {
-    public function index()	{
+   public function index()	{
         $origin = $_SERVER['HTTP_REFERER'];
         $role = $this->session->userdata('userrole');
         if ($role == 'user') $role = 'admin';
@@ -15,4 +15,5 @@ class Toggle extends Application {
         $this->session->set_userdata('userrole', $role);
         redirect($origin);
     }
+
 }
