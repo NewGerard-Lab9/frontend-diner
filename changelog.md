@@ -1,6 +1,15 @@
 # Change Log for Lab 8
 All notable changes to this project will be documented in this file. Created by Gerard Ng and Kwanchanok Sonsoi
 
+### Added - 2016-11-18
+- Created a new database dump file @gerardng
+
+### Changed - 2016-11-18
+- Upgraded Order model constructor @gerardng
+- Changed code in Order model to handle receipts @gerardng
+- Orders now handle validation @gerardng
+- Show reciept of order @gerardng
+
 ### Changed - 2016-11-17
 - Changed code order on Shopping controller @New3
 - Changed code menuitem-shop View to make pictures can be clickable @New
