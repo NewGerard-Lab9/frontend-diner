@@ -164,6 +164,7 @@ class Crud extends Application
         if (! empty($record)) {
             $this->menu->delete($key);
         }
+        $this->session->unset_userdata('record');
         $this->index();
     }
 
