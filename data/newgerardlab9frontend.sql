@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Nov 18, 2016 at 08:47 PM
+-- Generation Time: Nov 25, 2016 at 08:09 PM
 -- Server version: 5.6.28
 -- PHP Version: 5.6.25
 
@@ -64,37 +64,12 @@ INSERT INTO `ci_sessions` (`id`, `ip_address`, `timestamp`, `data`) VALUES
   ('515c89c84145dad5ea3ee4c4c08050820a4e330d', '127.0.0.1', 1479497245, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439363934363b6f726465727c613a333a7b733a363a226e756d626572223b693a303b733a383a226461746574696d65223b4e3b733a353a226974656d73223b613a313a7b693a31303b693a313b7d7d),
   ('e467542e68ccb220294b63a5ff7f762306e385e5', '127.0.0.1', 1479497547, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439373234373b6f726465727c613a333a7b733a363a226e756d626572223b693a303b733a383a226461746574696d65223b4e3b733a353a226974656d73223b613a363a7b693a31303b693a323b693a323b693a323b693a313b693a323b693a363b693a323b693a383b693a323b693a32313b693a323b7d7d),
   ('5026a0d65373cfc3750e33b92918a404aaef59be', '127.0.0.1', 1479497951, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439373635343b6f726465727c613a333a7b733a363a226e756d626572223b693a303b733a383a226461746574696d65223b4e3b733a353a226974656d73223b613a343a7b693a383b693a313b693a32353b693a333b693a31313b693a313b693a31303b693a313b7d7d),
-  ('bb228b08d55d012790d4f5e424d56dde733599e2', '127.0.0.1', 1479498000, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439373935373b);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `Menu`
---
-
-DROP TABLE IF EXISTS `Menu`;
-CREATE TABLE `Menu` (
-  `id` int(11) NOT NULL,
-  `name` varchar(32) NOT NULL,
-  `description` varchar(256) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
-  `picture` varchar(100) NOT NULL,
-  `category` varchar(1) NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
---
--- Dumping data for table `Menu`
---
-
-INSERT INTO `Menu` (`id`, `name`, `description`, `price`, `picture`, `category`) VALUES
-  (1, 'Cheese', 'Leave this raw milk, beefy and sweet cheese out for an hour before serving and pair with pear jam.', '2.95', '1.png', 's'),
-  (2, 'Turkey', 'Roasted, succulent, stuffed, lovingly sliced turkey breast', '5.95', '2.png', 'm'),
-  (6, 'Donut', 'Disgustingly sweet, topped with artery clogging chocolate and then sprinkled with Pixie dust', '1.25', '6.png', 's'),
-  (10, 'Bubbly', '1964 Moet Charmon, made from grapes crushed by elves with clean feet, perfectly chilled.', '14.50', '10.png', 'd'),
-  (11, 'Ice Cream', 'Combination of decadent chocolate topped with luscious strawberry, churned by gifted virgins using only cream from the Tajima strain of wagyu cattle', '3.75', '11.png', 's'),
-  (8, 'Hot Dog', 'Pork trimmings mixed with powdered preservatives, flavourings, red colouring and drenched in water before being squeezed into plastic tubes. Topped with onions, bacon, chili or cheese - no extra charge.', '6.90', '8.png', 'm'),
-  (25, 'Burger', 'Half-pound of beef, topped with bacon and served with your choice of a slice of American cheese, red onion, sliced tomato, and Heart Attack Grill\'s own unique special sauce.', '9.99', 'burger.png', 'm'),
-  (21, 'Coffee', 'A delicious cup of the nectar of life, saviour of students, morning kick-starter; made with freshly grounds that you don\'t want to know where they came from!', '2.95', 'coffee.png', 'd');
+  ('bb228b08d55d012790d4f5e424d56dde733599e2', '127.0.0.1', 1479498000, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439373935373b),
+  ('d2015a7f479aa64a8754b79b587587b73a1990eb', '127.0.0.1', 1479499672, 0x5f5f63695f6c6173745f726567656e65726174657c693a313437393439393432343b),
+  ('199ccd5067ef796c14b18fb7c8267442237f148f', '127.0.0.1', 1480098252, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438303039383235323b),
+  ('a8831506300aaaee58e67c7b2fc95b9450d17b3a', '127.0.0.1', 1480098732, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438303039383733323b),
+  ('b592193581eb3aa83b0311219478241e3cc76748', '127.0.0.1', 1480100456, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438303130303435343b),
+  ('77ec66689fc025bee8003c8e6d29e5abdc42e790', '127.0.0.1', 1480100885, 0x5f5f63695f6c6173745f726567656e65726174657c693a313438303130303838353b);
 
 -- --------------------------------------------------------
 
@@ -140,12 +115,6 @@ ALTER TABLE `Categories`
 --
 ALTER TABLE `ci_sessions`
   ADD KEY `ci_sessions_timestamp` (`timestamp`);
-
---
--- Indexes for table `Menu`
---
-ALTER TABLE `Menu`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `Orderitems`
