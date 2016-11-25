@@ -1,20 +1,16 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: gerard
- * Date: 2016-10-20
- * Time: 1:43 PM
- */
+
 /**
  * Modified to use REST client to get port data from our server.
  */
-define('REST_SERVER', 'http://backend.local');  // the REST server host
-define('REST_PORT', $_SERVER['SERVER_PORT']);               // the port you are running the server on
+define('REST_SERVER', 'http://backend.local');      // the REST server host
+define('REST_PORT', $_SERVER['SERVER_PORT']);       // the port you are running the server on
 
 class Menu extends MY_Model {
     // constructor
     function __construct() {
         parent::__construct();
+
         //*** Explicitly load the REST libraries.
         $this->load->library(['curl', 'format', 'rest']);
     }
@@ -23,8 +19,7 @@ class Menu extends MY_Model {
         $config = [
             ['field'=>'id', 'label'=>'Menu code', 'rules'=> 'required|integer'],
             ['field'=>'name', 'label'=>'Item name', 'rules'=> 'required'],
-            ['field'=>'description', 'label'=>'Item description', 'rules'=> 'required|max_l
-ength[256]'],
+            ['field'=>'description', 'label'=>'Item description', 'rules'=> 'required|max_length[256]'],
             ['field'=>'price', 'label'=>'Item price', 'rules'=> 'required|decimal'],
             ['field'=>'picture', 'label'=>'Item picture', 'rules'=> 'required'],
             ['field'=>'category', 'label'=>'Menu category', 'rules'=> 'required']
@@ -37,9 +32,10 @@ ength[256]'],
     {
         $this->rest->initialize(array('server' => REST_SERVER));
         $this->rest->option(CURLOPT_PORT, REST_PORT);
-        return $result = $this->rest->get('/maintenance/');
+        return $result = $this->rest->get('/maintenance');
     }
-    // Retrieve an existing DB record as an object
+
+// Retrieve an existing DB record as an object
     function get($key, $key2 = null)
     {
         $this->rest->initialize(array('server' => REST_SERVER));
@@ -47,9 +43,9 @@ ength[256]'],
         return $this->rest->get('/maintenance/item/id/' . $key);
     }
 
-    // Create a new data object.
-    // Only use this method if intending to create an empty record and then
-    // populate it.
+// Create a new data object.
+// Only use this method if intending to create an empty record and then
+// populate it.
     function create()
     {
         $names = ['id','name','description','price','picture','category'];
@@ -58,7 +54,8 @@ ength[256]'],
             $object->$name = "";
         return $object;
     }
-    // Delete a record from the DB
+
+// Delete a record from the DB
     function delete($key, $key2 = null)
     {
         $this->rest->initialize(array('server' => REST_SERVER));
@@ -66,7 +63,7 @@ ength[256]'],
         return $this->rest->delete('/maintenance/item/id/' . $key);
     }
 
-    // Determine if a key exists
+// Determine if a key exists
     function exists($key, $key2 = null)
     {
         $this->rest->initialize(array('server' => REST_SERVER));
@@ -74,18 +71,20 @@ ength[256]'],
         $result = $this->rest->get('/maintenance/item/id/' . $key);
         return ! empty($result);
     }
+
     // Update a record in the DB
     function update($record)
     {
         $this->rest->initialize(array('server' => REST_SERVER));
         $this->rest->option(CURLOPT_PORT, REST_PORT);
-        $retrieved = $this->rest->put('/maintenance/item/id/' . $record['id'], $record);
+        $retrieved = $this->rest->put('/maintenance/item/id/' . $record->id, $record);
     }
+
     // Add a record to the DB
     function add($record)
     {
         $this->rest->initialize(array('server' => REST_SERVER));
         $this->rest->option(CURLOPT_PORT, REST_PORT);
-        $retrieved = $this->rest->post('/maintenance/item/id' . $record['id'], $record);
+        $retrieved = $this->rest->post('/maintenance/item/id/' . $record->id, $record);
     }
 }
