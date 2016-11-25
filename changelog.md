@@ -1,6 +1,10 @@
 # Change Log for Lab 8
 All notable changes to this project will be documented in this file. Created by Gerard Ng and Kwanchanok Sonsoi
 
+### Added - 2016-11-24
+- Front end web app @gerardng
+- Refactored Menu controller to call rest service @gerardng
+
 ### Added - 2016-11-18
 - Created a new database dump file @gerardng
 
