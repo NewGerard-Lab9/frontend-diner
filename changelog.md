@@ -1,28 +1,34 @@
-# Change Log for Lab 7
+# Change Log for Lab 9
 All notable changes to this project will be documented in this file. Created by Gerard Ng and Kwanchanok Sonsoi
 
-### Changed - 2016-11-11
-- Created save function in Crud.php controller @gerardng
-- Created rules function in Menu.php model @gerardng
-- Corrected errors from previous instructions (textfield.php & Crud.php) @gerardng
-- Added error methods to Crud.php controller @gerardng
+### Added - 2016-11-24
+- Front end web app @gerardng
+- Refactored Menu controller to call rest service @gerardng
 
+### Added - 2016-11-18
+- Created a new database dump file @gerardng
 
-### Changed - 2016-11-10 
-- Added edit function on Crud.php for admin can edit the Maintenance page @New3
-- Created the mtce.php views to display the details for editing @New3
-- Created the mtce-edit.php views to display the edits details to edit. Also can save and cancel @New3
-- Edited caboose files to improve form appearance @New3
+### Changed - 2016-11-18
+- Upgraded Order model constructor @gerardng
+- Changed code in Order model to handle receipts @gerardng
+- Orders now handle validation @gerardng
+- Show reciept of order @gerardng
 
-### Added - 2016-11-04
-- Created toggle function and controller @New3 @gerardng
+### Changed - 2016-11-17
+- Changed code order on Shopping controller @New3
+- Changed code menuitem-shop View to make pictures can be clickable @New
+- Changed code on Shopping controller to make pictures can be clickable @New
+## [1.0.0] - 2016-11-17
+### Added 
+- Created Order.php Model @New3
+- Added summarize, keep_shopping functions on Shopping controller @New3
+- Added neworder, cancel,add functions on Shopping controller @New3
+- Added Cancel button on template-shopping view @New3
+- Added addItem function on Order Model to make an item can be added to an order @New3 
 
-## [1.0.0] - 2016-10-21
+## [Unreleased] - 2016-11-17
 ### Added
-
-## [Unreleased] - 2016-10-14
-### Added
-- forked CodeIgniter3.1-starter3 @gerardng, @New3
+- forked NewGerard-Diner/diner @gerardng, @New3
  
 
  

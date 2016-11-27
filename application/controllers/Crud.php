@@ -125,6 +125,8 @@ class Crud extends Application
         if ($key == null)
             if ($this->menu->exists($record->id))
                 $this->error_messages[] = 'Duplicate key adding new menu item';
+            else
+                $this->error_messages[] = 'The key (id) of the item you are trying to add is null';
         if (! $this->categories->exists($record->category))
             $this->error_messages[] = 'Invalid category code: ' . $record->category;
 
@@ -164,6 +166,7 @@ class Crud extends Application
         if (! empty($record)) {
             $this->menu->delete($key);
         }
+        $this->session->unset_userdata('record');
         $this->index();
     }
 
