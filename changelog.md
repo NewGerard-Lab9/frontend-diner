@@ -1,4 +1,4 @@
-# Change Log for Lab 8
+# Change Log for Lab 9
 All notable changes to this project will be documented in this file. Created by Gerard Ng and Kwanchanok Sonsoi
 
 ### Added - 2016-11-24
